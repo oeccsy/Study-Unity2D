@@ -8,6 +8,10 @@ public class PlayerMove : MonoBehaviour
     public float jumpPower;
     Rigidbody2D rigid;
 
+    public GameManager manager;
+
+    GameObject scanObject;
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -15,8 +19,11 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+
+        if (Input.GetKeyDown(KeyCode.Space) && scanObject != null)
+            // rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            manager.Action(scanObject);
+
             
         
     }
@@ -38,7 +45,11 @@ public class PlayerMove : MonoBehaviour
 
         if (rayHit.collider != null)
         {
-                Debug.Log(rayHit.collider.name);
+            scanObject = rayHit.collider.gameObject;
+        }
+        else
+        {
+            scanObject = null;
         }
             
     }

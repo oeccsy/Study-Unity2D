@@ -22,9 +22,11 @@ origin에서 dir방향으로 레이를 만들어낸다.
 LayerMask는 레이 캐스팅 시 콜라이더를 선택적으로 무시하는데 사용된다.  
 
 ### RaycastHit2D
-`RaycastHit2D rayHit = Physics2D.Raycast(gameObject.transform.positon, Vector3.down, 1);`  
+`RaycastHit2D rayHit = Physics2D.Raycast(gameObject.transform.positon, Vector3.down, 1, LayerMask.GetMask("Platform"));`  
 rayHit 객체에 레이와 콜라이더의 충돌정보를 저장한다.  
 (collider, distance, rigidbody, transform등)  
+
+LayerMask.GetMask("Platform") 인자를 넣으면, "Platform" 레이어인 오브젝트만 스캔을 할 수 있다.
 
 ```C#
 
