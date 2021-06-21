@@ -39,3 +39,10 @@ LayerMask.GetMask("Platform") 인자를 넣으면, "Platform" 레이어인 오브젝트만 스캔
                 Debug.Log(rayHit.collider.name);
         }       
 ```
+
+
+### [참고링크]
+* https://www.youtube.com/watch?v=2SikOdH7xvQ&list=PLO-mt5Iu5TeZGR_y6mHmTWyo0RyGgO0N_&index=4
+* https://docs.unity3d.com/kr/530/ScriptReference/Physics2D.Raycast.html
+* https://docs.unity3d.com/kr/530/ScriptReference/RaycastHit2D.html
+* https://chameleonstudio.tistory.com/63
