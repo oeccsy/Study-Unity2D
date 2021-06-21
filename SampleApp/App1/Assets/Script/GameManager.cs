@@ -16,26 +16,24 @@ public class GameManager : MonoBehaviour
 
     public void Action(GameObject scanObj)
     {
-        if (isAction)
-        {
-            isAction = false;
-        }
-        else
-        {
-            isAction = true;
-            scanObject = scanObj;
-            ObjectData objData = scanObject.GetComponent<ObjectData>();
-            Talk(objData.id, objData.isNpc);
-            //talkText.text = "이것의 이름은" + scanObject.name + "이다.";
-        }
 
-        talkPanel.SetActive(isAction);
+        scanObject = scanObj;
+        ObjectData objData = scanObject.GetComponent<ObjectData>();
+        Talk(objData.id, objData.isNpc);        //id, isnpc 정보로 text에 적절한 값 저장
+        talkPanel.SetActive(isAction);          //isAction값에 따라 말풍선 On/Off
 
     }
 
     void Talk(int id, bool isNpc)
     {
         string talkData = talkManager.GetTalk(id, talkIndex);
+
+        if(talkData == null)    //talkData이 null값이면 말풍선 Off
+        {
+            isAction = false;
+            talkIndex = 0;
+            return;
+        }
 
         if(isNpc)
         {
@@ -44,6 +42,10 @@ public class GameManager : MonoBehaviour
         else
         {
             talkText.text = talkData;
+
         }
+
+        isAction = true;
+        talkIndex++;
     }
 }
