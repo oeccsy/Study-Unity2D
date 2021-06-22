@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a154de638b10a49b25c6e2d2495ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1
+  id: 20
   isNpc: 1
 --- !u!1 &570804355
 GameObject:
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a154de638b10a49b25c6e2d2495ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
+  id: 30
   isNpc: 0
 --- !u!1 &670663223
 GameObject:
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a154de638b10a49b25c6e2d2495ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 4
+  id: 50
   isNpc: 1
 --- !u!1 &857370393
 GameObject:
@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a154de638b10a49b25c6e2d2495ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 3
+  id: 40
   isNpc: 0
 --- !u!1 &1801251773
 GameObject:
@@ -1434,7 +1434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a154de638b10a49b25c6e2d2495ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 10
   isNpc: 1
 --- !u!1 &1861000926
 GameObject:
@@ -1468,7 +1468,7 @@ MonoBehaviour:
   talkManager: {fileID: 857370394}
   talkText: {fileID: 1801251774}
   talkIndex: 0
-  portraitImg: {fileID: 0}
+  portraitImg: {fileID: 1245648715}
   scanObject: {fileID: 0}
   isAction: 0
   talkPanel: {fileID: 670663223}
